@@ -200,7 +200,6 @@ h1, h2, h3 {
     display: flex;
     gap: 200px;
     position: relative;
-    margin-top: 5%;
     margin-bottom: 2vh;
 }
 .flecha-rulo-img {
@@ -374,7 +373,7 @@ color: #ddd;
     align-items: center;
     margin-top: 50px; /* Separación de la grilla */
     height: 50px; 
-    margin-top: 20vh; /* Ajusta este valor según sea necesario */
+    margin-top: 10vh; /* Ajusta este valor según sea necesario */
     
     /* Para que el indicador no afecte el clic de la siguiente sección */
     pointer-events: none; 
