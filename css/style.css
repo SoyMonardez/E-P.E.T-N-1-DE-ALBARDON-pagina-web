@@ -609,7 +609,7 @@ text-align: center; }
 }
 /* Asume que tus imágenes están en la carpeta 'img/Pagina/' */
 .person-1 .photo-circle {
-    background-image: url('../img/Pagina/persona1.jpg');
+    background-image: url('../img/director.jpg');
     background-size: cover; /* Asegura que la imagen cubra todo el círculo */
     background-position: center; /* Centra la imagen */
 }
