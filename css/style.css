@@ -609,25 +609,25 @@ text-align: center; }
 }
 /* Asume que tus imágenes están en la carpeta 'img/Pagina/' */
 .person-1 .photo-circle {
-    background-image: url('/img/Pagina/persona1.jpg');
+    background-image: url('../img/Pagina/persona1.jpg');
     background-size: cover; /* Asegura que la imagen cubra todo el círculo */
     background-position: center; /* Centra la imagen */
 }
 
 .person-2 .photo-circle {
-    background-image: url('/img/vise.jpg');
+    background-image: url('../img/vise.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .person-3 .photo-circle {
-    background-image: url('/img/segura.jpg');
+    background-image: url('../img/segura.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .person-4 .photo-circle {
-    background-image: url('/img/Pagina/persona4.jpg');
+    background-image: url('../img/Pagina/persona4.jpg');
     background-size: cover;
     background-position: center;
 }
