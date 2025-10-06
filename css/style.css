@@ -615,13 +615,14 @@ text-align: center; }
 }
 
 .person-2 .photo-circle {
-    background-image: url('../img/vise.jpg');
+    /* CAMBIO: Se añade Pagina/ */
+    background-image: url('../img/Pagina/vise.jpg');
     background-size: cover;
     background-position: center;
 }
-
 .person-3 .photo-circle {
-    background-image: url('../img/segura.jpg');
+    /* CAMBIO: Se añade Pagina/ */
+    background-image: url('../img/Pagina/segura.jpg');
     background-size: cover;
     background-position: center;
 }
