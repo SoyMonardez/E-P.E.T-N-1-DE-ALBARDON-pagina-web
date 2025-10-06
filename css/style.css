@@ -1,0 +1,1155 @@
+/* ===================== PALETA DE COLORES ===================== */
+:root {
+    --color-fondo-base: #0f1724; /* Fondo principal (casi negro) */
+    --color-fondo-base1: #f5f5f565;
+    --color-fondo-tarjeta: #16161660; /* Gris más claro para recuadros */
+    --color-fondo-tarjeta1: #161616fa;
+    --color-acento-azul: #00BFFF; /* Azul Eléctrico (Deep Sky Blue) */
+    --color-acento-hover: #4dcfff; /* Azul un poco más claro para hover */
+    --color-texto-principal: #F5F5F5; /* Blanco sucio para texto */
+    --color-texto-secundario: #AAAAAA; /* Gris para texto de apoyo */
+    --color-borde: #555555; /* Borde de los recuadros */
+}
+/* ===================== PALETA DE COLORES ===================== */
+:root {
+    --color-fondo-base: #0f1724; /* Fondo principal (casi negro) */
+    /* Nuevo color para fondos con desenfoque */
+    --color-fondo-blur: rgba(15, 23, 36, 0.9); /* #0f1724 con 90% de opacidad */
+    --color-fondo-base1: #0f172410; /* Puedes mantenerla o eliminarla si no la usas más */
+    /* ... el resto de tus variables ... */
+}
+
+/* ===================== DESPLAZAMIENTO SUAVE (SOLUCIÓN SIMPLE) ===================== */
+html {
+    /* CLAVE: Esto añade la animación suave al hacer clic en enlaces internos (#ID) */
+    scroll-behavior: smooth;
+}
+
+/* === AÑADIR ESPACIO DE MARGEN PARA ENCABEZADO FIJO === */
+/* Aplica esto a todas las secciones que tengan un ID de destino. 
+   Esto deja un espacio de 90px (altura del header + aire) en la parte superior 
+   para que el contenido no quede oculto por el header fijo. */
+.conte, .orientaciones, .destacados, .novedades, .institucion, .main-footer {
+    scroll-margin-top: 90px;
+}
+/* ====================================================== */
+
+
+/* ===================== REAJUSTE Y TIPOGRAFÍA ===================== */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/* Evita la selección de texto e imágenes */
+* {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* Estándar */
+}
+
+/* Evita el highlight azul en móviles */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo-base);
+    color: var(--color-texto-principal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+body {
+    /* ... tus estilos actuales ... */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+    /* 🔑 AÑADE ESTA LÍNEA */
+    overflow-x: hidden; 
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #000000; /* fondo base oscuro */
+    background-image: radial-gradient(
+        ellipse 80% 80% at 50% -20%,
+        #7877c667,
+        #ffffff00
+    );
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-texto-principal);
+    text-align: center;
+    margin: 0;
+}
+.h1{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-texto-principal);
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    padding: 10px 0;
+    font-weight: 600;
+}
+.section-title {
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-texto-secundario);
+    margin-bottom: 40px;
+}
+
+/* ===================== HEADER ===================== */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--color-texto-principal);
+
+}
+.main-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-fondo-base1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+    border-radius: none;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 70px;
+    padding: 8px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-texto-principal);
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: var(--color-texto-principal);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 7px 14px;
+    transition: .5s;
+    border-bottom: transparent 2px solid;
+
+
+}
+.nav-link:hover{
+    border-bottom: var(--color-acento-hover) 2px solid;
+    transition: .5s;
+}
+
+/* Menú hamburguesa */
+.icons {
+    position: absolute;
+    font-size: 2.2rem;
+    color: var(--color-texto-principal);
+    cursor: pointer;
+    display: none;
+}
+
+/* Separador horizontal */
+.section-divider {
+    border-top: 1px solid var(--color-borde);
+    padding-top: 40px;
+    margin-top: 60px;
+}
+
+/* ===================== INSCRIPCIÓN ===================== */
+.conte {
+    display: flex;
+    gap: 200px;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 2vh;
+}
+.flecha-rulo-img {
+    width: 250px;
+    position: absolute;
+    top: 50px; 
+    left: 567px;
+    /* >>> AÑADE ESTA LÍNEA <<< */
+    filter: invert(1); 
+}
+.inscripcion-info {
+    margin-top: 100px;
+}
+.inscripcion-box {
+    width: 100%;
+    max-width: 500px; /* en desktop */
+    background-color: transparent;
+    border: 2px solid var(--color-borde);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px auto; /* centra en pantallas grandes */
+    transition: .3s;
+}
+.inscripcion-box:hover{
+    border: 2px solid var(--color-acento-azul);
+    
+}
+.inscripcion-box h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.inscripcion-box p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.form-inscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-inscripcion button:hover {
+    background-color: var(--color-acento-hover);
+}
+.btn-secundario.inst-item {
+    margin: 15px auto;     /* centra automáticamente */
+    display: inline-block; /* ocupa solo el tamaño del contenido */
+    padding: 6px 12px;     /* menos padding */
+    font-size: 0.85rem;    /* texto más compacto */
+    border: 1px solid var(--color-acento-azul);
+    color: var(--color-acento-azul);
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-secundario.inst-item:hover {
+    background-color: var(--color-acento-azul);
+    color: #111;
+}
+
+    .btn-secundario.inst-item:hover {
+    background-color: var(--color-acento-azul);
+    color: #111;
+}
+.megafono-y-estado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+.estado-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.aviso {
+    width: 150px;
+}
+.estado {
+    margin-bottom: 0px; 
+    color: var(--color-acento-azul);
+    text-align: center;
+}
+.estado-secundario {
+    text-align: center;
+    margin-top: 0px;
+    color: var(--color-texto-secundario);
+}
+.form-inscripcion ul li {
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+    margin-left: 20px;
+    list-style: disc;
+    margin-bottom: 10px;
+}
+
+.inscripcion-box {
+width: 95%;
+margin: 20px auto;
+padding: 20px;
+border-radius: 18px;
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.1);
+box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+position: relative;
+overflow: hidden;
+}
+
+
+.inscripcion-box::before {
+content: '';
+position: absolute;
+top: -110%; left: -100%;
+width: 300%; height: 300%;
+background: conic-gradient(from 180deg, #00BFFF, #FFA500, #DA70D6, #00BFFF);
+animation: spin 6s linear infinite;
+opacity: 0.25;
+}
+
+
+.inscripcion-box h2, .inscripcion-box p {
+position: relative;
+z-index: 2;
+}
+
+
+.form-inscripcion ul li {
+font-size: 0.9rem;
+margin-bottom: 6px;
+color: #ddd;
+}
+
+
+
+/* principal.css - Alrededor de la línea 275 (La última definición es la que gana) */
+/* Este es el bloque que se aplica en desktop. */
+.btn-secundario {
+    position: relative;
+    z-index: 2;
+    /* Mantener 'display: block' para que tome el ancho completo del contenedor (horizontalmente largo) */
+    display: block; 
+    margin: 15px auto 0;
+    
+    /* CAMBIO CLAVE: Reducir el padding vertical (primera medida) a 2px o 1px */
+    /* El 20px de horizontal asegura que el texto no esté muy pegado a los lados */
+    padding: 10px 20px;
+    
+    /* Reducir el tamaño de la fuente para comprimir la altura del botón (verticalmente angosto) */
+    font-size: 0.75rem; 
+    
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #00BFFF, #FFA500);
+    color: #111;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    left: 20%;
+}
+
+/* ============ INDICADOR DE DESPLAZAMIENTO (SCROLL DOWN) ===================== */
+.scroll-down-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Separación de la grilla */
+    height: 50px; 
+    margin-top: 20vh; /* Ajusta este valor según sea necesario */
+    
+    /* Para que el indicador no afecte el clic de la siguiente sección */
+    pointer-events: none; 
+}
+
+
+.scroll-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-acento-azul); /* Usa tu color de acento */
+    stroke-width: 2.5; /* Hace el icono más grueso y visible */
+    
+    /* Aplica la animación */
+    animation: bounce 2s infinite; 
+}
+
+/* Definición de la animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición normal */
+    }
+    40% {
+        transform: translateY(-10px); /* Sube 10px */
+    }
+    60% {
+        transform: translateY(-5px); /* Sube 5px (más corto) */
+    }
+}
+/* ===================== IMAGEN DE LA ESCUELA CON DEGRADE ===================== */
+.school-image-section {
+    position: relative; 
+    width: 100vw; 
+    /* Eliminamos el margin-top base para controlarlo con Media Queries */
+    margin-top: 0; 
+    overflow: hidden; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -5px; 
+}
+
+/* === MEDIA QUERY PARA PC/NOTEBOOK (A PARTIR DE 1025PX) === */
+/* Aplicamos un gran margen superior solo en pantallas grandes (> 1024px) 
+   para empujar la imagen hacia abajo y forzar el scroll. */
+@media (min-width: 1025px) {
+    .school-image-section {
+        /* Aproximadamente la altura de la ventana (viewport height) */
+        margin-top: 15vh; 
+        /* Usamos 'vh' para que se adapte mejor a la altura de la ventana del usuario */
+    }
+}
+/* ==================================== */
+
+.school-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    max-height: 600px; 
+}
+
+/* Pseudo-elemento para el efecto de desvanecimiento INFERIOR (degradado) */
+.school-image-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 150px; 
+    background: linear-gradient(
+        to top, 
+        #000000e8 0%, 
+        rgba(24, 24, 24, 0) 100%
+    );
+    pointer-events: none; 
+}
+
+.school-image-section::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 150px; 
+    background: linear-gradient(
+        to bottom, 
+        #000000de 0%, 
+        rgba(24, 24, 24, 0) 100%
+    );
+    pointer-events: none; 
+}
+
+/* ===================== SEPARADOR AJUSTE ===================== */
+/* Ajustamos la separación de la siguiente sección para que el degradado quede sobre la imagen */
+.section-divider {
+
+    margin-top: 0;
+    padding-top: 40px;
+}
+
+/* ===================== ORIENTACIONES ===================== */
+.orientaciones{ width:100%; position:relative; left:50%; transform:translateX(-50%); padding:40px 20px; }
+.orientaciones-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:20px; }
+
+/* CARD BASE */
+.orientacion-card{ position:relative; border-radius:12px; min-height:280px; overflow:hidden; display:flex; align-items:flex-end; padding:0; background:transparent; transition:.28s ease; }
+.orientacion-card::before{ content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; border-radius:16px; z-index:0; animation:rotate 4s linear infinite; opacity:.85; }
+.orientacion-card .card-bg{ position:absolute; inset:4px; border-radius:8px; background-size:cover; background-position:center; z-index:1; filter:saturate(1) contrast(.98); }
+
+/* >>>>>> CÓDIGO CLAVE MODIFICADO AQUÍ <<<<<< */
+.orientacion-card .card-overlay{ 
+    position:absolute; 
+    inset:4px; 
+    border-radius:8px; 
+    z-index:2; 
+    pointer-events:none; 
+    /* Degradado más oscuro (0.85) y se extiende hasta el 40% de la tarjeta */
+    background:linear-gradient(
+        to top, 
+        rgb(0, 0, 0) 0%,       /* Más oscuro en la base */
+        rgba(0, 0, 0, 0.733) 40%,      /* Extiende la oscuridad hasta el 40% */
+        rgba(0, 0, 0, 0.24) 65%,      /* Transición más gradual */
+        rgba(0,0,0,0) 90%         /* Desaparece más arriba */
+    ); 
+}
+
+
+.orientacion-card .card-inner{ position:relative; z-index:3; padding:20px; color:var(--color-texto-principal); display:flex; flex-direction:column; gap:12px; }
+.orientacion-card .card-title{ margin:0; font-size:1.25rem; }
+.orientacion-card .card-content p{ margin:0; font-size:.95rem; color:rgba(255,255,255,.92); }
+.orientacion-card:hover{ transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,.45); }
+
+/* Ajuste el hover para que también refleje la nueva intensidad, aunque es opcional */
+.orientacion-card:hover .card-overlay{ 
+    background:linear-gradient(
+        to top, 
+        rgba(0,0,0,.9) 0%,         /* Aún más oscuro al pasar el ratón */
+        rgba(0,0,0,.6) 45%,        /* Extiende aún más la oscuridad */
+        rgba(0,0,0,.2) 70%, 
+        rgba(0,0,0,0) 95%
+    );
+}
+
+/* Bordes animados específicos */
+.orientacion-card:nth-child(1)::before{ background:linear-gradient(60deg,#FF8C00 0%,#FFA500 20%,#FFF 40%,#FFA500 60%,#FF8C00 80%,#FF4500 100%); }
+.orientacion-card:nth-child(2)::before{ background:linear-gradient(60deg,#00FFFF 0%,#00BFFF 20%,#FFF 40%,#00BFFF 60%,#00FFFF 80%,#0080FF 100%); }
+.orientacion-card:nth-child(3)::before{ background:linear-gradient(60deg,#FF00FF 0%,#DA70D6 20%,#FFF 40%,#DA70D6 60%,#FF00FF 80%,#8A2BE2 100%); }
+
+/* Fondos por card */
+.orientacion-card:nth-child(1) .card-bg{ background-image:url('../img/obra.jpeg'); }
+.orientacion-card:nth-child(2) .card-bg{ background-image:url('../img/programacion.jpeg'); }
+.orientacion-card:nth-child(3) .card-bg{ background-image:url('../img/minero.jpeg'); }
+
+/* Botón */
+.btn-info{ display:inline-block; padding:10px 20px; border:1px solid var(--color-acento-azul); color:var(--color-acento-azul); border-radius:5px; text-transform:uppercase; font-weight:500; transition:.3s;
+width: 200px;
+align-items: center;
+text-align: center; }
+.btn-info:hover{ background-color:var(--color-acento-azul); color:var(--color-fondo-base); }
+.card-inner{
+    align-items: center;
+}
+/* Keyframes */
+@keyframes rotate{ from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+@keyframes bounce{ 0%,20%,50%,80%,100%{transform:translateY(0);} 40%{transform:translateY(-10px);} 60%{transform:translateY(-5px);} }
+
+/* Botón base */
+.btn-info {
+    display:inline-block; 
+    padding:10px 20px; 
+    border:1px solid; 
+    border-radius:5px; 
+    text-transform:uppercase; 
+    font-weight:500; 
+    transition:.3s;
+    width: 200px;
+    text-align: center;
+}
+
+/* Construcciones → Naranja */
+.orientacion-card:nth-child(1) .btn-info {
+    border-color: #FFA500;
+    color: #FFA500;
+}
+.orientacion-card:nth-child(1) .btn-info:hover {
+    background-color: #FFA500;
+    color: #111;
+}
+
+/* Informática → Azul */
+.orientacion-card:nth-child(2) .btn-info {
+    border-color: #00BFFF;
+    color: #00BFFF;
+}
+.orientacion-card:nth-child(2) .btn-info:hover {
+    background-color: #00BFFF;
+    color: #111;
+}
+
+/* Minería → Violeta */
+.orientacion-card:nth-child(3) .btn-info {
+    border-color: #DA70D6;
+    color: #DA70D6;
+}
+.orientacion-card:nth-child(3) .btn-info:hover {
+    background-color: #DA70D6;
+    color: #111;
+}
+.orientacion-card{
+    cursor: pointer;
+}
+
+/* ===================== DESTACADOS ===================== */
+.destacados {
+    margin: 80px 0;
+}
+.destacados-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.person-card {
+    text-align: center;
+}
+.photo-circle {
+    width: 150px;
+    height: 150px;
+    /* background-image: url(/img/Pagina/vise.jpg); /* Eliminado para usar imágenes específicas */
+    border: 2px solid var(--color-acento-azul);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+/* Asume que tus imágenes están en la carpeta 'img/Pagina/' */
+.person-1 .photo-circle {
+    background-image: url('/img/Pagina/persona1.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el círculo */
+    background-position: center; /* Centra la imagen */
+}
+
+.person-2 .photo-circle {
+    background-image: url('/img/vise.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.person-3 .photo-circle {
+    background-image: url('/img/segura.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.person-4 .photo-circle {
+    background-image: url('/img/Pagina/persona4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===================== NOVEDADES ===================== */
+.novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(180px, 1fr));
+    gap: 20px;
+}
+.novedad-item {
+    background-color: var(--color-fondo-base);
+    border: 2px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 20px;
+}
+.novedad-item.featured {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.novedad-item.with-image {
+    padding: 0;
+    overflow: hidden;
+}
+.image-placeholder {
+    height: 60%;
+    background-color: var(--color-acento-azul);
+    opacity: 0.3;
+}
+
+/* ===================== INSTITUCIÓN ===================== */
+.institucion {
+    background-image:var(--color-fondo-base);
+    padding: 80px 20px;
+    margin-top: 60px;
+}
+.institucion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.inst-item {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--color-texto-principal);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    transition: background-color 0.3s;
+    border: 2px solid var(--color-borde);
+    
+}
+.inst-item:hover {
+    border-color: var(--color-acento-azul);
+    color: var(--color-acento-azul);
+}
+.inst-icon {
+    width: 28px;
+    height: 28px;
+    stroke: var(--color-acento-azul);
+    margin-bottom: 5px;
+}
+.inst-item:hover .inst-icon {
+    stroke: var(--color-acento-hover);
+}
+
+/* ===================== FOOTER ===================== */
+.main-footer {
+    
+    padding: 40px 20px 20px;
+    text-align: center;
+    color: var(--color-texto-principal); /* Asegura que el texto sea visible */
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--color-borde);
+    padding: 30px;
+    gap: 30px;
+}
+.rrss p {
+    margin-bottom: 10px;
+}
+
+/* ===================== ICONOS DE REDES SOCIALES ===================== */
+.social-icons a {
+    display: inline-flex; 
+    transition: transform 0.3s ease;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Tamaño */
+.social-icons a i {
+    font-size: 2.8rem; 
+    color: var(--color-texto-principal); /* Color base (blanco) */
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: rotate(10deg); /* Efecto de rotación */
+}
+
+/* Colores en hover (solo PC) */
+.social-icons a:hover i.bxl-facebook {
+    color: #1877F2; /* Azul Facebook */
+}
+.social-icons a:hover i.bxl-instagram {
+    color: #E1306C; /* Magenta Instagram */
+}
+.social-icons a:hover i.bxl-whatsapp {
+    color: #25D366; /* Verde WhatsApp */
+}
+
+
+.map-placeholder {
+    padding-top: 20px;
+    text-align: center;
+}
+.map-placeholder p {
+    margin-bottom: 15px;
+    color: var(--color-texto-secundario);
+    font-size: 1rem;
+}
+
+/* SOLUCIÓN AL ESPACIO NEGRO: Aumentar las dimensiones y controlar el IFRAME */
+.map-box {
+    width: 100%;
+    max-width: 400px; 
+    height: 250px; 
+    
+    border: 2px solid var(--color-borde);
+    background-color: var(--color-fondo-tarjeta);
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+.map-box iframe {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-acento-azul);
+}
+.logo-footer img {
+    width: 120px;
+    height: auto;
+    padding: 10px;
+}
+.map-description {
+    font-size: 2rem;
+    color: var(--color-texto-secundario);
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 15px 30px;
+    }
+    .brand img {
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+    .brand h1 {
+        font-size: 1.2rem;
+    }
+    .main-nav {
+        gap: 15px;
+    }
+    .conte {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    .inscripcion-box {
+        width: 100%;
+    }
+    .flecha-rulo-img {
+        display: none;
+    }
+    .megafono-y-estado {
+        justify-content: center;
+    }
+}
+
+/* Móviles y pequeñas (aplicamos el mismo estilo que tabletas para mantener la consistencia) */
+@media (max-width: 768px) {
+  .main-header {
+      padding: 12px 20px;
+      /* REDUCCIÓN DE LA DURACIÓN a 0.3s */
+      transition: .3s;
+  }
+.main-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-fondo-base1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+    border-radius: none;
+}
+
+  .main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      max-height: 0;
+      /* REDUCCIÓN DE LA DURACIÓN a 0.3s */
+      transition: max-height 0.3s ease-in-out;
+      z-index: 200;
+        background-color: var(--color-fondo-base1);
+        backdrop-filter: blur(20px);
+        border: var(--color-texto-secundario) 2px solid;
+        border-top: none;
+        border-radius: 0 0 40px 40px;
+        /* Añadido padding para que no quede pegado al borde */
+        padding: 0 0;
+        margin: 0;
+        border-bottom: var(--color-texto-secundario) 1px solid;
+        box-sizing: border-box;
+
+
+  }
+
+  .nav-link {
+      width: 80%;
+      padding: 15px 0;
+      text-align: center;
+
+      /* Animación inicial */
+      opacity: 0;
+      transform: translateY(-15px);
+      /* REDUCCIÓN DE LA DURACIÓN a 0.3s */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      /* CORRECCIÓN DE SINTAXIS: Se añade el valor base para el cálculo del retardo escalonado */
+      transition-delay: calc(0.05s * var(--i));
+
+  }
+
+  .main-header.active .nav-link {
+      opacity: 1;
+      width: auto;
+      padding: 5px 15px;
+      transform: translateY(0);
+      /* REDUCCIÓN DE LA DURACIÓN a 0.3s */
+      transition: .3s;
+        transition-delay: calc(0.05s * var(--i));
+        border-bottom: 2px solid var(--color-acento-hover);
+
+  }
+
+  
+  .main-header.active .main-nav {
+      max-height: 400px;
+      padding: 10px 0;
+      background-color: var(--color-fondo-base1);
+      backdrop-filter: blur(20px);
+      border: var(--color-texto-secundario) 2px solid;
+      border-top: none;
+      border-radius: 0   0 40px 40px;
+      z-index: 100;
+      /* REDUCCIÓN DE LA DURACIÓN a 0.3s */
+      transition: .3s;
+  }
+
+  /* Mostrar icono hamburguesa */
+  .icons {
+      display: block;
+      margin-left: auto;
+      cursor: pointer;
+      right: 0;
+      margin-right: 5%;
+  }
+
+  .icons i {
+      display: block;
+      font-size: 2.2rem;
+      transition: transform 0.3s ease;
+  }
+
+  /* Cuando el menú está abierto, rota el ícono */
+  .main-header.active .icons i {
+      transform: rotate(180deg);
+  }
+
+  .conte {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  }
+
+  .inscripcion-box {
+      width: 100%;
+      margin: 0;
+  }
+
+  .flecha-rulo-img {
+      display: none;
+  }
+
+  .megafono-y-estado {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .orientaciones-grid {
+      grid-template-columns: 1fr;
+  }
+    .inscripcion-box {
+      max-width: 90%;  /* ocupa el 90% del ancho en celular */
+      padding: 15px;   /* menos padding */
+      font-size: 0.95rem; /* texto más compacto */
+  }
+
+  .inscripcion-box h2 {
+      font-size: 1rem; /* título más chico */
+  }
+
+  .form-inscripcion ul li {
+      font-size: 0.85rem; /* requisitos más chicos */
+      margin-left: 15px;
+      margin-bottom: 8px;
+  }
+
+/* principal.css - Dentro de @media (max-width: 768px) */
+.btn-secundario{
+    
+    /* CLAVE: Reducir aún más el tamaño de la fuente */
+    font-size: 0.6rem; 
+    
+    /* CLAVE: Padding más pequeño verticalmente (top/bottom) */
+    /* Usa un valor muy pequeño, como 1px o 2px. 
+       Aumenta un poco el horizontal (15px) para que parezca más largo. */
+    padding: 10px 10px; 
+    
+    /* Eliminamos el width fijo de 120px que hacía el botón corto y mal proporcionado */
+    width: 90%; /* Para que sea horizontalmente casi igual al ancho del contenedor */
+    
+    /* Eliminamos height fijo si existiera, para que el padding y la fuente lo controlen */
+    height: auto; 
+    
+    margin: 10px auto 0;
+    left: 0;
+}
+ .destacados-grid {
+    margin-top: 10px;
+    /* Reemplazar flex-direction: column; por un grid de 2 columnas */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+    gap: 5px; /* Reduce el espacio entre las tarjetas */
+    padding: 0 10px; /* Añade un pequeño padding lateral */
+    /* ¡ELIMINAR la regla original que decía: flex-direction: column; gap: 20px; ! */
+}
+.photo-circle {
+    width: 100px;
+    height: 100px;
+    /* background-image: url(/img/Pagina/vise.jpg); /* Eliminado para usar imágenes específicas */
+    border: 2px solid var(--color-acento-azul);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+  .novedades-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  }
+
+  .novedad-item.featured {
+      grid-column: auto;
+      grid-row: auto;
+  }
+
+  .institucion-grid {
+      grid-template-columns: repeat(2, 1fr)
+  }
+
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+  }
+
+  .map-placeholder {
+      text-align: center;
+  }
+
+  .map-box {
+      margin: 10px auto;
+      width: 90%;
+  }
+  .scroll-down-indicator{
+    /* Hacemos que el indicador de scroll sea invisible en móvil, ya que el contenido es corto. */
+    display: none;
+  }
+/* principal.css - Dentro de @media (max-width: 768px) - Alrededor de la línea 717 */
+.btn-secundario.inst-item {
+    font-size: 0.5rem;
+    padding: 2px 4px;
+    width: 120px; /* <--- Esto impide que sea 'horizontalmente igual de largo' */
+    margin: 10px auto 0;
+    height: 28px; /* <--- Esto fija la altura y puede ignorar el padding */
+}
+    .school-image-section::after {
+      height: 30px; /* más bajo */
+      background: linear-gradient(
+          to top,
+          rgba(24, 24, 24, 0.7) 0%,  /* menos oscuro */
+          rgba(24, 24, 24, 0) 100%
+      );
+  }
+
+  .school-image-section::before {
+      height: 80px;
+      background: linear-gradient(
+          to bottom,
+          rgba(24, 24, 24, 0.7) 0%, 
+          rgba(24, 24, 24, 0) 100%
+      );
+  }
+}
+/* ===================== MODAL REUTILIZABLE ===================== */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7); /* Fondo oscuro */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--color-fondo-tarjeta1);
+  color: var(--color-texto-principal);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-acento-azul);
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+#modal-icon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5; /* icono más grueso */
+}
+/* ===================== FIN DEL CSS ===================== */
+/* Evita que el pseudo-elemento bloquee clics */
+.inscripcion-box::before {
+  pointer-events: none;
+}
+
+/* Asegura que el botón quede por encima del overlay */
+.btn-secundario {
+  position: relative;
+  z-index: 3;
+  /* conserva tus estilos actuales (padding, bg, etc.) */
+}
+/* =====================
+   ANIMACIONES DE ENTRADA
+===================== */
+
+.animar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Opcionales: efectos alternativos */
+.animar.fade-left { transform: translateX(-40px); }
+.animar.fade-right { transform: translateX(40px); }
+.animar.zoom { transform: scale(0.9); }
+
+.animar.visible.fade-left,
+.animar.visible.fade-right,
+.animar.visible.zoom {
+    transform: none;
+    opacity: 1;
+}
+/* ===================== FIN ANIMACIONES ===================== */
