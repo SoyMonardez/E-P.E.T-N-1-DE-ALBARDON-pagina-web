@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPET N°1 Albardón - Informática</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- Reutilizamos el header existente -->
+  <header class="main-header">
+    <div class="brand">
+      <a class="img" href="../index.html"><img src="../img/logo-blanco.png" alt="logo de la escuela epet n°1 de albardon"></a>
+      <h1><a class="h1" href="../index.html">E.P.E.T N°1</a></h1>
+    </div>
+
+    <div class="icons" id="menu-btn"><i class='bx bx-menu'></i></div>
+
+    <nav class="main-nav" id="nav-links">
+      <a href="../index.html#inscripcion" class="nav-link" style="--i:0">Inscripción</a>
+      <a href="../index.html#orientaciones" class="nav-link" style="--i:1">Orientaciones</a>
+      <a href="../index.html#institucion" class="nav-link" style="--i:2">Institución</a>
+      <a href="../index.html#contacto" class="nav-link" style="--i:3">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero principal con fondo generado por CSS -->
+  <section class="hero-section" style="position: relative; overflow: hidden; padding: 120px 20px; text-align: center; color: white;">
+    <div class="hero-bg"></div>
+    <h2 class="hero-title">Piensa, crea, innova: sé la mente detrás del progreso.</h2>
+  </section>
+
+  <style>
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #111111;
+      background-image: radial-gradient(#ffffff33 1px, #04153b 1px);
+      background-size: 20px 20px;
+      z-index: -1;
+    }
+  </style>
+
+  <!-- Contenido principal -->
+  <main class="orientacion-info animar" id="informatica">
+    <section class="intro orientaciones" style="text-align:center; margin-top:50px;">
+      <h3 class="section-title">Orientación: <span style="color:var(--color-acento-azul)">Informática</span></h3>
+      <h2 class="h1">Plan de estudio técnico <i class='bx bx-book'></i></h2>
+
+      <div class="orientaciones-grid" style="margin-top:40px;">
+        <!-- Tarjeta izquierda -->
+        <div class="info-card plan-estudio-left">
+          <h4>Título Otorgado: <span style="color:var(--color-acento-azul)">Técnico en Informática</span></h4>
+          <p>Duración de la tecnicatura: <span style="color:var(--color-acento-azul)">4 Años</span></p>
+          <p>Ingreso a la orientación: <span style="color:var(--color-acento-azul)">4°2°</span></p>
+          <blockquote>Educación técnica con visión de futuro.</blockquote>
+        </div>
+
+        <!-- Tarjeta derecha con íconos -->
+        <div class="info-card plan-estudio-right">
+          <div class="info-item">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <span><strong>+900</strong> Tasas de Cafe</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span><strong>+600</strong> Egresados</span>
+          </div>
+          <a href="../docs/plan-informatica.pdf" download class="btn-secundario">Descargar plan de estudio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prácticas profesionalizantes -->
+    <section class="practicas section-divider animar">
+      <h3 class="section-title">Prácticas Profesionalizantes</h3>
+      <p style="max-width:650px; margin:10px auto; text-align:center;">Los estudiantes realizan más de 200hs de prácticas en instituciones y empresas locales, aplicando sus conocimientos en entornos reales y desarrollando habilidades profesionales clave.</p>
+    </section>
+
+    <!-- Perfil de egresado -->
+    <section class="perfil-egresado section-divider animar">
+      <h3 class="section-title">Perfil del Egresado <i class='bx bx-graduation'></i></h3>
+      <div class="orientaciones-grid">
+        <div class="info-card"><i class='bx bx-chip'></i><p>Mantenimiento de hardware</p></div>
+        <div class="info-card"><i class='bx bx-network-chart'></i><p>Administración de redes</p></div>
+        <div class="info-card"><i class='bx bx-code-alt'></i><p>Programación y desarrollo web</p></div>
+        <div class="info-card"><i class='bx bx-data'></i><p>Gestión de bases de datos</p></div>
+      </div>
+    </section>
+
+    <!-- Salida laboral -->
+    <section class="salida-laboral section-divider animar">
+      <h3 class="section-title">Salida Laboral <i class='bx bx-briefcase'></i></h3>
+      <div class="orientaciones-grid">
+        <div class="info-card"><h4><span style="color:var(--color-acento-azul)">Roles</span></h4><p>Técnico de Soporte IT, Programador Junior, Administrador de Redes.</p></div>
+        <div class="info-card"><h4><span style="color:var(--color-acento-azul)">Ámbitos</span></h4><p>Empresas tecnológicas, oficinas públicas, emprendimientos independientes.</p></div>
+        <div class="info-card"><h4><span style="color:var(--color-acento-azul)">Modalidad</span></h4><p>Soporte, desarrollo de software, redes y servicios digitales.</p></div>
+      </div>
+    </section>
+
+    <!-- Continuidad -->
+    <section class="continuidad section-divider animar">
+      <h3 class="section-title">Continuidad de Estudios <i class='bx bx-book-reader'></i></h3>
+      <div class="continuidad-content">
+        <h4>Carreras de Grado de Alta Demanda (Universidad):</h4>
+        <ul>
+          <li>Ingeniería en Sistemas de Información / Informática</li>
+          <li>Licenciatura en Ciencias de la Computación</li>
+          <li>Licenciatura en Análisis de Sistemas</li>
+          <li>Licenciatura en Ciberseguridad o Seguridad Informática</li>
+          <li>Diseño Multimedia o Desarrollo de Videojuegos</li>
+        </ul>
+        
+        <h4>Cursos y Certificaciones de Rápida Salida Laboral:</h4>
+        <ul>
+          <li>Desarrollo Web Full Stack (React, Node.js, Python/Django)</li>
+          <li>Cloud Computing (AWS, Azure o Google Cloud)</li>
+          <li>Data Science y Business Intelligence (Python, SQL)</li>
+          <li>Administración de Redes y Servicios (Cisco/CCNA)</li>
+          <li>Testing de Software (QA Automation)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Equipamiento -->
+    <section class="equipamiento section-divider animar">
+      <h3 class="section-title">Equipamiento y Laboratorios <i class='bx bx-laptop'></i></h3>
+      <p style="max-width:600px; margin:10px auto; text-align:center;">Todas las orientaciones cuentan con más de 40 notebooks listas para usar, laboratorios equipados con PCs de escritorio, proyectores, pantallas smart TV para las exposiciones y conexión de red completa.</p>
+    </section>
+
+    <!-- Otras orientaciones -->
+    <section class="otras-orientaciones section-divider animar">
+      <h3>¿Quieres ver otras orientaciones?</h3>
+      <div class="orientaciones-grid" style="justify-content:center;">
+        <a href="../html/construccionnes.html" class="btn-info-construcciones">Construcciones</a>
+        <a href="../html/mineria.html" class="btn-info-mineria">Minería</a> 
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="logo-footer"><img src="../img/logo-blanco.png" alt="logo escuela epet n°1 de albardon"></div>
+      <div class="rrss">
+        <p>Síguenos en</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/pages/Epet-N1-De-Albardon/244387562392570" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.instagram.com/epetn1dealbardon/" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="https://wa.me/5492646296764" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/animaciones.js"></script>
+  <script>
+  const menuBtn=document.getElementById('menu-btn');
+  const header=document.querySelector('.main-header');
+  const icon=menuBtn.querySelector('i');
+  menuBtn.addEventListener('click',()=>{
+    header.classList.toggle('active');
+    icon.classList.toggle('bx-menu');
+    icon.classList.toggle('bx-x');
+  });
+  </script>
+</body>
+</html>

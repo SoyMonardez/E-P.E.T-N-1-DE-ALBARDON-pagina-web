@@ -1153,3 +1153,529 @@ text-align: center; }
     opacity: 1;
 }
 /* ===================== FIN ANIMACIONES ===================== */
+
+
+
+/* _____________________orientaciones________________*/
+
+
+/* ===================== ESTILOS ESPECÍFICOS DE INFORMÁTICA ===================== */
+
+.orientacion-info {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-texto-principal);
+}
+
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+}
+
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  z-index: 2;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.info-card i {
+  font-size: 2rem;
+  color: var(--color-acento-azul);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.orientaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.section-divider {
+  margin-top: 80px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--color-texto-principal);
+}
+
+/* Botones personalizados */
+.btn-secundario, .btn-info {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario {
+  border: 1px solid var(--color-acento-azul);
+  color: var(--color-fondo-tarjeta1);
+}
+.btn-secundario:hover {
+  background-color: var(--color-fondo-base1);
+  color: #111;
+}
+
+.btn-info {
+  border: 1px solid var(--color-acento-azul);
+  color: var(--color-acento-azul);
+}
+.btn-info:hover {
+  background-color: var(--color-acento-azul);
+  color: #111;
+}
+
+/* Íconos dentro de tarjetas */
+.perfil-egresado .info-card i,
+.salida-laboral .info-card i {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.4rem;
+  }
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .info-card {
+    padding: 15px;
+  }
+  .orientacion-info {
+    padding: 20px;
+  }
+}
+/* ===================== BOTONES OTRAS ORIENTACIONES ===================== */
+.otras-orientaciones {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.otras-orientaciones h3 {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.otras-orientaciones .orientaciones-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.otras-orientaciones .btn-info {
+  min-width: 180px;
+  font-size: 0.95rem;
+  text-align: center;
+  border: 2px solid var(--color-acento-azul);
+  color: var(--color-acento-azul);
+  border-radius: 8px;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.otras-orientaciones .btn-info:hover {
+  background-color: var(--color-acento-azul);
+  color: #0f0f0f;
+  transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .otras-orientaciones .btn-info {
+    min-width: 140px;
+    font-size: 0.85rem;
+    padding: 10px 0;
+  }
+  .otras-orientaciones .orientaciones-grid {
+    gap: 20px;
+  }
+}
+/* ===================== ESTILOS PARA LA TARJETA DE ESTUDIOS (INFORMATICA.HTML) ===================== */
+.orientacion-info .plan-estudio-right {
+  /* Habilita Flexbox en la tarjeta para reorganizar los elementos */
+  display: flex;
+  flex-direction: column; /* Apila los info-item y el botón verticalmente */
+  justify-content: space-around; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Centra horizontalmente el botón y el texto */
+  padding: 30px 20px; /* Un poco más de espacio interno */
+}
+
+.orientacion-info .info-card .info-item {
+  /* Alinea el icono y el span uno al lado del otro */
+  display: flex;
+  align-items: center; /* Alinea verticalmente el icono y el texto */
+  gap: 15px; /* Espacio entre el icono y el texto */
+  margin: 10px 0; /* Espacio entre los info-items */
+  width: 100%;
+  justify-content: center; /* Centra el conjunto icono-texto */
+  text-align: left; /* Asegura que el texto comience a la izquierda del icono (aunque no se note mucho con justify-content: center) */
+}
+
+.orientacion-info .info-card .info-item i {
+  /* Estilo específico para los iconos en esta tarjeta */
+  font-size: 2.5rem; /* Icono un poco más grande */
+  margin-bottom: 0; /* Elimina el margen inferior que los hacía saltar */
+}
+
+.orientacion-info .info-card .info-item span {
+    /* Estilo para el texto, si es necesario */
+    font-size: 1.1rem;
+}
+/* =================================================================================================== */
+/* ===================== ESTILOS PARA LA SECCIÓN DE CONTINUIDAD (LISTAS) ===================== */
+
+.orientacion-info .continuidad-content {
+    max-width: 800px;
+    margin: 20px auto 0; /* Centra el contenedor y lo separa del título */
+    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+    padding: 0 20px;
+}
+
+.orientacion-info .continuidad-content h4 {
+    color: var(--color-acento-azul); /* Usa el color de acento para los subtítulos */
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.orientacion-info .continuidad-content ul {
+    list-style: none; /* Elimina las viñetas predeterminadas */
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.orientacion-info .continuidad-content ul li {
+    font-size: 1rem;
+    color: var(--color-texto-principal);
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1); /* Separador sutil */
+    
+    /* Añade un punto estilizado al inicio de cada ítem */
+    position: relative;
+    padding-left: 20px;
+}
+
+.orientacion-info .continuidad-content ul li::before {
+    content: '\2022'; /* Código Unicode para un punto */
+    color: var(--color-acento-hover);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em; /* Aumenta el tamaño de la viñeta */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .orientacion-info .continuidad-content h4 {
+        font-size: 1.1rem;
+    }
+    .orientacion-info .continuidad-content ul li {
+        font-size: 0.95rem;
+    }
+}
+/* ===================== ORIENTACIÓN CONSTRUCCIONES ===================== */
+.color-construcciones { color: #FFA500; }
+.construcciones-btn {
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+.construcciones-btn:hover {
+  background-color: #FFA500;
+  color: #111;
+}
+.construcciones-hero .hero-bg {
+  background-color: #111;
+  background-image: radial-gradient(#ffffff33 1px, #FF8C00 1px);
+  background-size: 20px 20px;
+}
+
+/* ===================== ORIENTACIÓN MINERÍA ===================== */
+.color-mineria { color: #DA70D6; }
+.mineria-btn {
+  border: 1px solid #DA70D6;
+  color: #DA70D6;
+}
+.mineria-btn:hover {
+  background-color: #DA70D6;
+  color: #111;
+}
+.mineria-hero .hero-bg {
+  background-color: #111;
+  background-image: radial-gradient(#ffffff33 1px, #8A2BE2 1px);
+  background-size: 20px 20px;
+}
+
+
+/* ===================== BOTONES POR ORIENTACIÓN ===================== */
+
+/* Informática – Azul */
+.btn-info-informatica {
+  border: 2px solid #00BFFF;
+  color: #00BFFF;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-info-informatica:hover {
+  background-color: #00BFFF;
+  color: #111;
+}
+
+/* Construcciones – Naranja */
+.btn-info-construcciones {
+  border: 2px solid #FFA500;
+  color: #FFA500;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-info-construcciones:hover {
+  background-color: #FFA500;
+  color: #111;
+}
+
+/* Minería – Violeta */
+.btn-info-mineria {
+  border: 2px solid #DA70D6;
+  color: #DA70D6;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-info-mineria:hover {
+  background-color: #DA70D6;
+  color: #111;
+}
+/* ===================== FIN ESTILOS ORIENTACIONES ===================== */
+
+
+
+/* ===================== novedades ===================== */
+/* ===================== ESTILOS PARA LA SECCIÓN NOVEDADES ===================== */
+
+.novedades {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.novedades-grid {
+    display: grid;
+    /* 3 columnas por defecto */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    
+    /* ESTILO CLAVE: Define la altura base de cada fila y permite auto-crecimiento */
+    grid-auto-rows: minmax(350px, auto); 
+}
+
+.novedad-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    /* La altura la controla el grid-auto-rows */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--color-blanco);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.novedad-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Novedad Destacada: Ocupa dos columnas y DOS FILAS (soluciona el espacio vacío) */
+.novedad-item.featured {
+    grid-column: span 2; 
+    grid-row: span 2; 
+    
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--color-acento-hover); 
+}
+
+/* Novedades con imagen de fondo */
+.novedad-item.with-image {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Novedades solo de texto (fondo de color) */
+.novedad-item.text-only {
+    background-color: var(--color-fondo-secundario); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.novedad-item.text-only:hover {
+    background-color: var(--color-acento-azul); 
+}
+
+/* Superposición oscura para mejorar la legibilidad del texto en las imágenes */
+.novedad-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.05) 60%);
+    transition: background 0.3s ease;
+}
+
+.novedad-item:hover .novedad-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 70%);
+}
+
+.novedad-item.text-only .novedad-overlay {
+    background: none; 
+}
+
+.novedad-content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+.novedad-tag {
+    display: inline-block;
+    background-color: var(--color-acento-hover); 
+    color: var(--color-fondo-principal);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.novedad-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.novedad-item.featured .novedad-title {
+    font-size: 2.2rem;
+}
+
+.novedad-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+/* Estilo del botón (ajustar a tu clase btn-small) */
+.btn-small {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--color-acento-azul);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.btn-small:hover {
+    background-color: var(--color-acento-hover);
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .novedades-grid {
+        /* En tablet, 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        /* Reducimos la altura base de las filas */
+        grid-auto-rows: minmax(300px, auto); 
+    }
+    
+    .novedad-item.featured {
+        /* En tablet, la destacada ocupa 2 columnas, pero SOLO UNA FILA (más compacta) */
+        grid-column: span 2; 
+        grid-row: span 1;
+        height: 350px; /* Altura ajustada */
+    }
+    
+    .novedad-item.featured .novedad-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .novedades-grid {
+        /* En móvil, 1 columna */
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    /* Todas las novedades vuelven a ocupar 1 columna y 1 fila */
+    .novedad-item, .novedad-item.featured {
+        grid-column: span 1; 
+        grid-row: span 1;
+        height: 280px;
+    }
+    .novedad-item.featured .novedad-title {
+        font-size: 1.6rem;
+    }
+}

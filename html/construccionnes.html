@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPET N°1 Albardón - Construcciones</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Reutilizamos el header existente -->
+  <header class="main-header">
+    <div class="brand">
+      <a class="img" href="../index.html"><img src="../img/logo-blanco.png" alt="logo de la escuela epet n°1 de albardon"></a>
+      <h1><a class="h1" href="../index.html">E.P.E.T N°1</a></h1>
+    </div>
+
+    <div class="icons" id="menu-btn"><i class='bx bx-menu'></i></div>
+
+    <nav class="main-nav" id="nav-links">
+      <a href="../index.html#inscripcion" class="nav-link" style="--i:0">Inscripción</a>
+      <a href="../index.html#orientaciones" class="nav-link" style="--i:1">Orientaciones</a>
+      <a href="../index.html#institucion" class="nav-link" style="--i:2">Institución</a>
+      <a href="../index.html#contacto" class="nav-link" style="--i:3">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero principal con fondo generado por CSS -->
+  <section class="hero-section" style="position: relative; overflow: hidden; padding: 120px 20px; text-align: center; color: white;">
+    <div class="hero-bg"></div>
+    <h2 class="hero-title">Diseña, construye y transforma el entorno.</h2>
+  </section>
+
+  <style>
+    /* Hero específico: patrón naranja sutil — si ya lo definiste en style.css, podés quitarlo */
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #111111;
+      background-image: radial-gradient(#ffffff33 1px, #e68003 1px);
+      background-size: 20px 20px;
+      z-index: -1;
+    }
+  </style>
+
+  <!-- Contenido principal -->
+  <main class="orientacion-info animar" id="construcciones">
+    <section class="intro orientaciones" style="text-align:center; margin-top:50px;">
+      <h3 class="section-title">Orientación: <span style="color:#FFA500">Construcciones</span></h3>
+      <h2 class="h1">Plan de estudio técnico <i class='bx bx-book'></i></h2>
+
+      <div class="orientaciones-grid" style="margin-top:40px;">
+        <!-- Tarjeta izquierda -->
+        <div class="info-card plan-estudio-left">
+          <h4>Título Otorgado: <span style="color:#FFA500">Técnico en Construcciones</span></h4>
+          <p>Duración de la tecnicatura: <span style="color:#FFA500">4 Años</span></p>
+          <p>Ingreso a la orientación: <span style="color:#FFA500">4°1°</span></p>
+          <blockquote>Forma parte de quienes construyen el futuro.</blockquote>
+        </div>
+
+        <!-- Tarjeta derecha con íconos -->
+        <div class="info-card plan-estudio-right">
+          <div class="info-item">
+            <i  style="color:#FFA500" class="fa-solid fa-building"></i>
+            <span><strong>95%</strong> Práctica en obras</span>
+          </div>
+          <div class="info-item">
+            <i  style="color:#FFA500" class="fa-solid fa-user-graduate"></i>
+            <span><strong>+500</strong> Egresados</span>
+          </div>
+          <a href="../docs/plan-construcciones.pdf" download class="btn-secundario" style="border-color:#FFA500;color:#000000">Descargar plan de estudio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prácticas profesionalizantes -->
+    <section class="practicas section-divider animar">
+      <h3 class="section-title">Prácticas Profesionalizantes</h3>
+      <p style="max-width:650px; margin:10px auto; text-align:center;">Los alumnos participan en proyectos reales, desarrollando planos, presupuestos y gestionando obras civiles bajo la guía de profesionales.</p>
+    </section>
+
+    <!-- Perfil de egresado -->
+    <section class="perfil-egresado section-divider animar">
+      <h3 class="section-title">Perfil del Egresado <i class='bx bx-hard-hat'></i></h3>
+      <div class="orientaciones-grid">
+        <div  class="info-card"><i  style="color:#FFA500" class='bx bx-building-house'></i><p>Dibujo técnico y modelado 3D</p></div>
+        <div class="info-card"><i  style="color:#FFA500" class='bx bx-pencil'></i><p>Diseño y planificación de obras</p></div>
+        <div class="info-card"><i  style="color:#FFA500" class='bx bx-wrench'></i><p>Gestión de materiales y herramientas</p></div>
+        <div class="info-card"><i  style="color:#FFA500" class='bx bx-line-chart'></i><p>Supervisión y control de proyectos</p></div>
+      </div>
+    </section>
+
+    <!-- Salida laboral -->
+    <section class="salida-laboral section-divider animar">
+      <h3 class="section-title">Salida Laboral <i class='bx bx-briefcase'></i></h3>
+      <div class="orientaciones-grid">
+        <div class="info-card"><h4><span style="color:#FFA500">Roles</span></h4><p>Dibujante técnico, proyectista, asistente de obra, topógrafo auxiliar.</p></div>
+        <div class="info-card"><h4><span style="color:#FFA500">Ámbitos</span></h4><p>Empresas constructoras, estudios de arquitectura, organismos públicos.</p></div>
+        <div class="info-card"><h4><span style="color:#FFA500">Modalidad</span></h4><p>Diseño, dirección y ejecución de obras.</p></div>
+      </div>
+    </section>
+
+<!-- Continuidad -->
+<section class="continuidad section-divider animar">
+  <h3 class="section-title">Continuidad de Estudios <i class='bx bx-book-reader'></i></h3>
+  <div class="continuidad-content">
+    <h4 style="color:#FFA500">Carreras de Grado de Alta Demanda (Universidad):</h4>
+    <ul>
+      <li>Ingeniería Civil</li>
+      <li>Arquitectura</li>
+      <li>Ingeniería en Construcciones</li>
+      <li>Ingeniería Industrial</li>
+      <li>Ingeniería Ambiental</li>
+      <li>Licenciatura en Higiene y Seguridad Laboral</li>
+    </ul>
+
+    <h4 style="color:#FFA500">Tecnicaturas Superiores y Carreras Cortas:</h4>
+    <ul>
+      <li>Tecnicatura en Obras Civiles</li>
+      <li>Tecnicatura en Diseño y Planificación de Obras</li>
+      <li>Tecnicatura en Construcciones Sustentables</li>
+      <li>Tecnicatura en Topografía y Agrimensura</li>
+      <li>Tecnicatura en Higiene y Seguridad en el Trabajo</li>
+    </ul>
+
+    <h4 style="color:#FFA500">Cursos y Certificaciones de Rápida Salida Laboral:</h4>
+    <ul>
+      <li>Autodesk AutoCAD 2D/3D y Revit Arquitectura</li>
+      <li>Diseño y Cálculo Estructural (CYPE, SAP2000, CivilCAD)</li>
+      <li>Gestión de Obras y Presupuestos (Project, Excel, Presto)</li>
+      <li>Construcción en Seco, Steel Frame y Montajes Estructurales</li>
+      <li>Seguridad e Higiene en la Construcción</li>
+      <li>Certificaciones IRAM e ISO aplicadas al rubro edilicio</li>
+    </ul>
+  </div>
+</section>
+
+ <!-- Equipamiento -->
+    <section class="equipamiento section-divider animar">
+      <h3 class="section-title">Equipamiento y Laboratorios <i class='bx bx-laptop'></i></h3>
+      <p style="max-width:600px; margin:10px auto; text-align:center;">Todas las orientaciones cuentan con más de 40 notebooks listas para usar, laboratorios equipados con PCs de escritorio, proyectores, pantallas smart TV para las exposiciones y conexión de red completa.</p>
+    </section>
+
+
+    <!-- Otras orientaciones -->
+    <section class="otras-orientaciones section-divider animar">
+      <h3>¿Quieres ver otras orientaciones?</h3>
+      <div class="orientaciones-grid" style="justify-content:center;">
+        
+        <a href="../html/mineria.html" class="btn-info-mineria">Minería</a>
+        <a href="../html/informatica.html" class="btn-info-informatica">Informática</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="logo-footer"><img src="../img/logo-blanco.png" alt="logo escuela epet n°1 de albardon"></div>
+      <div class="rrss">
+        <p>Síguenos en</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/pages/Epet-N1-De-Albardon/244387562392570" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.instagram.com/epetn1dealbardon/" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="https://wa.me/5492646296764" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/animaciones.js"></script>
+  <script>
+  const menuBtn=document.getElementById('menu-btn');
+  const header=document.querySelector('.main-header');
+  const icon=menuBtn.querySelector('i');
+  menuBtn.addEventListener('click',()=>{
+    header.classList.toggle('active');
+    icon.classList.toggle('bx-menu');
+    icon.classList.toggle('bx-x');
+  });
+  </script>
+</body>
+</html>
