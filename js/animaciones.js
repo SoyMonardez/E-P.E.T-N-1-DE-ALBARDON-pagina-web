@@ -19,3 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elementosAnimados.forEach(el => observador.observe(el));
 });
+// Detecta animaciones al hacer scroll
+const elementosAnimar = document.querySelectorAll('.animar');
+
+function mostrarElementosVisibles() {
+  const alturaPantalla = window.innerHeight;
+  elementosAnimar.forEach(el => {
+    const posicion = el.getBoundingClientRect().top;
+    if (posicion < alturaPantalla - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+// Ejecuta al cargar y al hacer scroll
+window.addEventListener('scroll', mostrarElementosVisibles);
+window.addEventListener('load', mostrarElementosVisibles);

@@ -1567,9 +1567,7 @@ text-align: center; }
     background-color: var(--color-fondo-secundario); 
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.novedad-item.text-only:hover {
-    background-color: var(--color-acento-azul); 
-}
+
 
 /* Superposición oscura para mejorar la legibilidad del texto en las imágenes */
 .novedad-overlay {
@@ -1678,4 +1676,248 @@ text-align: center; }
     .novedad-item.featured .novedad-title {
         font-size: 1.6rem;
     }
+}
+
+/* ===================== ESTILOS PARA CHATBOT (GEMINI) [RESPONSIVE Y ESTÉTICO] ===================== */
+
+/* Chatbot integrado al estilo EPET N°1 */
+.chat-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(45deg, #f5d36b, #ffd84b);
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(245, 211, 107, 0.4);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 220, 120, 0.7);
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  width: 340px;
+  height: 460px;
+  background: #111;
+  border: 2px solid #f5d36b;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(245, 211, 107, 0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.chat-window.open {
+  display: flex;
+}
+
+.chat-header {
+  background: #1e1e1e;
+  color: #f5d36b;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #f5d36b;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  scroll-behavior: smooth;
+}
+
+.user-msg, .bot-msg {
+  padding: 8px 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.user-msg {
+  background: #f5d36b;
+  color: #000;
+  align-self: flex-end;
+}
+
+.bot-msg {
+  background: #1c1c1c;
+  color: #f5d36b;
+  border: 1px solid #f5d36b;
+  align-self: flex-start;
+}
+
+.chat-input-area {
+  display: flex;
+  border-top: 1px solid #f5d36b;
+  background: #1e1e1e;
+}
+
+.chat-input-area input {
+  flex: 1;
+  background: #000;
+  color: #f5d36b;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.chat-input-area button {
+  background: #f5d36b;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* ====== COLORES PERSONALIZADOS DEL CHATBOT POR ORIENTACIÓN ====== */
+
+/* Construcciones → Naranja */
+body.chat-construcciones .chat-toggle,
+body.chat-construcciones .chat-window {
+  border-color: #FFA500;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
+}
+body.chat-construcciones .chat-toggle {
+  background: linear-gradient(45deg, #ffb347, #ffcc33);
+  color: #111;
+}
+body.chat-construcciones .bot-msg {
+  background: #1c1c1c;
+  color: #FFA500;
+  border: 1px solid #FFA500;
+}
+
+/* Informática → Azul */
+body.chat-informatica .chat-toggle,
+body.chat-informatica .chat-window {
+  border-color: #00BFFF;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+}
+body.chat-informatica .chat-toggle {
+  background: linear-gradient(45deg, #0099ff, #00ccff);
+  color: #fff;
+}
+body.chat-informatica .bot-msg {
+  background: #1c1c1c;
+  color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+/* Minería → Violeta */
+body.chat-mineria .chat-toggle,
+body.chat-mineria .chat-window {
+  border-color: #DA70D6;
+  box-shadow: 0 0 20px rgba(218, 112, 214, 0.4);
+}
+body.chat-mineria .chat-toggle {
+  background: linear-gradient(45deg, #b666d2, #da70d6);
+  color: #fff;
+}
+body.chat-mineria .bot-msg {
+  background: #1c1c1c;
+  color: #DA70D6;
+  border: 1px solid #DA70D6;
+}
+
+
+/* ===================== ESTILO INTERNO SEGÚN ORIENTACIÓN ===================== */
+
+/* 🎯 CONSTRUCCIONES (Naranja) */
+body.chat-construcciones .chat-window {
+  border: 2px solid #FFA500;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+}
+body.chat-construcciones .chat-header {
+  background: #1c1c1c;
+  color: #FFA500;
+  border-bottom: 1px solid #FFA500;
+}
+body.chat-construcciones .bot-msg {
+  background: #1a1a1a;
+  color: #FFA500;
+  border: 1px solid #FFA500;
+}
+body.chat-construcciones .user-msg {
+  background: #FFA500;
+  color: #000;
+}
+body.chat-construcciones .chat-input-area button {
+  background: #FFA500;
+  color: #000;
+}
+body.chat-construcciones .chat-input-area input {
+  color: #FFA500;
+  border-color: #FFA500;
+}
+
+/* 💻 INFORMÁTICA (Azul) */
+body.chat-informatica .chat-window {
+  border: 2px solid #00BFFF;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+}
+body.chat-informatica .chat-header {
+  background: #1c1c1c;
+  color: #00BFFF;
+  border-bottom: 1px solid #00BFFF;
+}
+body.chat-informatica .bot-msg {
+  background: #0a0a0a;
+  color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+body.chat-informatica .user-msg {
+  background: #00BFFF;
+  color: #000;
+}
+body.chat-informatica .chat-input-area button {
+  background: #00BFFF;
+  color: #000;
+}
+body.chat-informatica .chat-input-area input {
+  color: #00BFFF;
+}
+
+/* ⛏️ MINERÍA (Violeta) */
+body.chat-mineria .chat-window {
+  border: 2px solid #DA70D6;
+  box-shadow: 0 0 30px rgba(218, 112, 214, 0.3);
+}
+body.chat-mineria .chat-header {
+  background: #1c1c1c;
+  color: #DA70D6;
+  border-bottom: 1px solid #DA70D6;
+}
+body.chat-mineria .bot-msg {
+  background: #0a0a0a;
+  color: #DA70D6;
+  border: 1px solid #DA70D6;
+}
+body.chat-mineria .user-msg {
+  background: #DA70D6;
+  color: #000;
+}
+body.chat-mineria .chat-input-area button {
+  background: #DA70D6;
+  color: #000;
+}
+body.chat-mineria .chat-input-area input {
+  color: #DA70D6;
 }

@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-<body>
+<!-- informatica.html -->
+<body class="chat-informatica">
+
   <!-- Reutilizamos el header existente -->
   <header class="main-header">
     <div class="brand">
@@ -135,6 +137,8 @@
       <h3 class="section-title">Equipamiento y Laboratorios <i class='bx bx-laptop'></i></h3>
       <p style="max-width:600px; margin:10px auto; text-align:center;">Todas las orientaciones cuentan con más de 40 notebooks listas para usar, laboratorios equipados con PCs de escritorio, proyectores, pantallas smart TV para las exposiciones y conexión de red completa.</p>
     </section>
+    
+    
 
     <!-- Otras orientaciones -->
     <section class="otras-orientaciones section-divider animar">
@@ -145,6 +149,7 @@
       </div>
     </section>
   </main>
+
 
   <footer class="main-footer">
     <div class="footer-content">
@@ -160,7 +165,8 @@
     </div>
   </footer>
 
-  <script src="../js/animaciones.js"></script>
+<script src="../js/animaciones.js"></script>
+
   <script>
   const menuBtn=document.getElementById('menu-btn');
   const header=document.querySelector('.main-header');
@@ -171,5 +177,24 @@
     icon.classList.toggle('bx-x');
   });
   </script>
+  
+
+
+<!-- Chatbot flotante -->
+<button id="chat-toggle" class="chat-toggle">
+  💬
+</button>
+
+<div id="chat-window" class="chat-window">
+  <div class="chat-header">Asistente EPET N°1</div>
+  <div id="chat-messages" class="chat-messages">
+    <div class="bot-msg">👋 ¡Hola! Soy el asistente de la E.P.E.T N°1. ¿En qué te puedo ayudar?</div>
+  </div>
+  <div class="chat-input-area">
+    <input id="chat-input" type="text" placeholder="Escribí tu pregunta..." />
+    <button id="chat-send">Enviar</button>
+  </div>
+</div>
+<script src="../js/chatbot.js"></script>
 </body>
 </html>

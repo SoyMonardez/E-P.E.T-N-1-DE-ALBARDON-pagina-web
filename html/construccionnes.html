@@ -10,7 +10,9 @@
     <link rel="icon" href="../img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<!-- construccionnes.html -->
+<body class="chat-construcciones">
+
   <!-- Reutilizamos el header existente -->
   <header class="main-header">
     <div class="brand">
@@ -74,7 +76,7 @@
             <i  style="color:#FFA500" class="fa-solid fa-user-graduate"></i>
             <span><strong>+500</strong> Egresados</span>
           </div>
-          <a href="../docs/plan-construcciones.pdf" download class="btn-secundario" style="border-color:#FFA500;color:#000000">Descargar plan de estudio</a>
+          <a href="../docs/plan-mayor-de-obra.pdf" download class="btn-secundario" style="border-color:#FFA500;color:#000000">Descargar plan de estudio</a>
         </div>
       </div>
     </section>
@@ -184,5 +186,22 @@
     icon.classList.toggle('bx-x');
   });
   </script>
+  
+<!-- Chatbot flotante -->
+<button id="chat-toggle" class="chat-toggle">
+  💬
+</button>
+
+<div id="chat-window" class="chat-window">
+  <div class="chat-header">Asistente EPET N°1</div>
+  <div id="chat-messages" class="chat-messages">
+    <div class="bot-msg">👋 ¡Hola! Soy el asistente de la E.P.E.T N°1. ¿En qué te puedo ayudar?</div>
+  </div>
+  <div class="chat-input-area">
+    <input id="chat-input" type="text" placeholder="Escribí tu pregunta..." />
+    <button id="chat-send">Enviar</button>
+  </div>
+</div>
+<script src="../js/chatbot.js"></script>
 </body>
 </html>
